@@ -1,0 +1,18 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int n=nums.length;
+        int low=0;
+       int  high=0;
+       while(high<n){
+           if(nums[low]==0 && nums[high]==0){
+               high++;
+           }
+               else{
+                   int temp=nums[low];
+                   nums[low]=nums[high];
+                   nums[high]=temp;
+                   high++;
+                   low++;
+               }
+
+           }
